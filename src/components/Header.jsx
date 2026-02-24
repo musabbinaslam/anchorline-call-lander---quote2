@@ -18,8 +18,8 @@ const Header = ({ scrolled }) => {
           </Link>
 
           <nav className="nav">
-            <a href="#home">Home</a>
-            <a href="#features">Features</a>
+            <Link to="/">Home</Link>
+            <Link to="/#features">Features</Link>
             <a href="tel:+19412496799" onClick={() => { if (window.fbq) window.fbq('track', 'Contact'); }}>Contact</a>
           </nav>
 

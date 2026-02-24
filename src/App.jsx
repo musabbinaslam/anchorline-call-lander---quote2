@@ -38,6 +38,19 @@ function App() {
     if (window.fbq) {
       window.fbq('track', 'PageView');
     }
+
+    // Handle scroll to hash on load or location change
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [location])
 
   return (
